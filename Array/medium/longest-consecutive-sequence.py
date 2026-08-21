@@ -24,6 +24,8 @@
 #         longest = max(longest, count) 
 #     return longest 
 
+# Time Complexity: O(N) - each number is visited at most twice (once in outer loop, once in while)
+# Space Complexity: O(N) - numSet stores all unique elements
 def longestConsecutive(nums:list[int]) -> int:
         numSet = set(nums)
         longest = 0

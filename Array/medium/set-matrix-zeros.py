@@ -3,6 +3,9 @@
 # [1,0,1]  -> [0,0,0]
 # [1,1,1]     [1,0,1] 
 # https://leetcode.com/problems/set-matrix-zeroes/description/
+
+# Time Complexity: O(M * N) - two passes over the entire M x N matrix
+# Space Complexity: O(1) - uses the first row and first column as markers (in-place)
 def setZeros(matrix:list[list[int]]):
     row_len = len(matrix)
     col_len = len(matrix[0])

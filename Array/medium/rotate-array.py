@@ -4,6 +4,8 @@
 # 7 8 9    9 6 3 
 # https://leetcode.com/problems/rotate-image/description/ 
 
+# Time Complexity: O(N^2) - iterates over roughly half the N*N elements to swap
+# Space Complexity: O(1) - in-place transposition, no extra space used
 def transpose(matrix:list[list[int]]):
     row_length = len(matrix) 
     col_length = len(matrix[0])
@@ -16,6 +18,8 @@ def transpose(matrix:list[list[int]]):
             matrix[i][j] = matrix[j][i]
             matrix[j][i] = temp
 
+# Time Complexity: O(N) - swaps elements from both ends towards the middle
+# Space Complexity: O(1) - in-place reversal using a temp variable
 def reverse(nums:list[int], start:int, end:int):
     while start < end:
         temp = nums[start]
@@ -24,6 +28,8 @@ def reverse(nums:list[int], start:int, end:int):
         start += 1
         end -= 1
 
+# Time Complexity: O(N^2) - transpose is O(N^2) + N reversal calls each O(N) = O(N^2)
+# Space Complexity: O(1) - entire rotation done in-place
 def rotateMatrix(matrix:list[list[int]]):
     n = len(matrix)
     transpose(matrix)
