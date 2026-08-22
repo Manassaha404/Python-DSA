@@ -2,7 +2,7 @@
 # Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] 
 # such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0. 
 # [-1,0,1,2,-1,-4] -> [[-1,-1,2],[-1,0,1]] 
-
+# https://leetcode.com/problems/3sum/description/ 
 # brute force
 # Time Complexity: O(N^3) - three nested loops over the array
 # Space Complexity: O(N) - hashSet stores unique triplets (up to N triplets in worst case)
