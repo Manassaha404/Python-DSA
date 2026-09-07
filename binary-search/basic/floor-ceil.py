@@ -16,13 +16,15 @@ def floor_ceil(arr: list[int], target: int) -> tuple[int, int]:
     while left <= right:
         mid = left + (right - left) // 2 
         if arr[mid] == target:
-            floor = arr[mid]
-            ceil = arr[mid]
+            floor = mid
+            ceil = mid
             return (floor, ceil)
         elif arr[mid] < target:
-            floor = arr[mid]
+            floor = mid
             left = mid + 1 
         else:
-            ceil = arr[mid]
+            ceil = mid
             right = mid - 1 
     return (floor, ceil)
+
+print(floor_ceil([5,7,7,8,8,10], 8)) 
