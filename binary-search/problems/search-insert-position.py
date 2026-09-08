@@ -15,4 +15,5 @@ def searchInsert(arr: list[int], target: int) -> int:
             low = mid + 1 
     return high 
 
-# Time Complexity: O(log n)
+# Time Complexity: O(log n) - binary search halves the search space each iteration
+# Space Complexity: O(1) - only constant extra variables used

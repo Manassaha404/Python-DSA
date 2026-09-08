@@ -29,4 +29,7 @@ def searchRange(nums: list[int], target: int) -> list[int]:
     else:
         return [-1, -1] 
 
+# Time Complexity: O(log n) - two independent binary searches, each O(log n)
+# Space Complexity: O(1) - only constant extra variables used
+
 print(searchRange([], 6))
