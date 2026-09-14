@@ -18,13 +18,13 @@
 
 def lower_bound(arr:list[int], target:int):
     low = 0 
-    high = len(arr)
-    while low < high:
+    high = len(arr) - 1 
+    while low <= high:
         mid = low + (high - low)//2
         if arr[mid] >= target:
-            high = mid 
+            high = mid - 1 
         else:
             low = mid + 1 
-    return high 
+    return low  
 
-print(lower_bound([5], 5))
+print(lower_bound([1], 1)) 
