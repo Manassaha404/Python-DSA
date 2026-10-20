@@ -92,6 +92,24 @@ class LinkedList:
             prev.next = curr.next 
             self._size -= 1
 
+    # Time: O(n) | Space: O(1)  — O(n) to find the node with the matching value
+    def deleteByValue(self, value: Any) -> None:
+        prev = None 
+        curr = self.head 
+        while curr is not None:
+            if curr.value == value:
+                if prev is None:
+                    self.deleteAtFirst()
+                elif curr == self.tail:
+                    self.deleteAtEnd()
+                else:
+                    prev.next = curr.next
+                    self._size -= 1
+                return
+            prev = curr
+            curr = curr.next
+    
+
             
 
 
