@@ -6,7 +6,8 @@ class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
-
+# Time Complexity  : O(N) — where N is the number of nodes; Floyd's Cycle-Finding Algorithm takes linear time to detect loop and find the start node
+# Space Complexity : O(1) — uses two pointers with constant auxiliary space
 def detectCycle(head: Optional[ListNode]) -> Optional[ListNode]:
     if head is None:
         return None  
