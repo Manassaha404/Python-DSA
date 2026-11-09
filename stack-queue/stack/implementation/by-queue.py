@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/implement-stack-using-queues/description/ 
+# https://leetcode.com/problems/implement-stack-using-queues/description/
 from collections import deque
 class MyStack:
 
