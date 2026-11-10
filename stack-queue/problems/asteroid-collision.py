@@ -5,11 +5,11 @@
 # Space Complexity: O(N) - the stack can hold at most N asteroids (e.g. all moving right)
 def asteroidCollision(self, asteroids: list[int]) -> list[int]:
     stack = []
-    for asterorid in asteroids:
-        if asterorid > 0 or stack == []:
-            stack.append(asterorid)
+    for asteroid in asteroids:
+        if asteroid > 0 or stack == []:
+            stack.append(asteroid)
         else:
-            absolute = abs(asterorid)
+            absolute = abs(asteroid)
             isDis = False
             while len(stack) > 0 and stack[-1] > 0:
                 if stack[-1] == absolute:
@@ -22,5 +22,5 @@ def asteroidCollision(self, asteroids: list[int]) -> list[int]:
                 else:
                     stack.pop()
             if isDis == False:
-                stack.append(asterorid)
+                stack.append(asteroid)
     return stack
